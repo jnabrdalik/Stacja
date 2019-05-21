@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         viewPager = findViewById(R.id.container);
         setupViewPager(viewPager);
     }
-
+    //aaa
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
