@@ -1,5 +1,6 @@
 package com.example.stacjapogodowa;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -19,6 +20,17 @@ public class WeatherDataStatePagerAdapter extends FragmentPagerAdapter {
         fragmentList.add(fragment);
     }
 
+    public boolean contains(String cityName) {
+        for (Fragment f : fragmentList) {
+            Bundle args = f.getArguments();
+            String fragmentCityName = args.getString("city");
+            if (cityName.equals(fragmentCityName))
+                return true;
+        }
+
+        return false;
+    }
+
     @Override
     public Fragment getItem(int i) {
         return fragmentList.get(i);
@@ -27,5 +39,10 @@ public class WeatherDataStatePagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return fragmentList.size();
+    }
+
+    public void updateAll() {
+        for (Fragment f : fragmentList)
+            ((WeatherFragment) f).updateData();
     }
 }

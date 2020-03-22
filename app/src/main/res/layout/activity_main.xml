@@ -8,30 +8,18 @@
     android:background="@android:color/black">
 
     <TextView
-        android:id="@+id/altitude_descr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="32dp"
-        android:text="Aktualna wysokość:"
-        android:textColor="@color/colorAccent"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
         android:id="@+id/altitude_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
         android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif-black"
         android:gravity="right"
         android:text="1002,23 m"
         android:textColor="@color/colorAccent"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/container"
@@ -40,7 +28,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/altitude_descr"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/altitude_tv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tb1" />
@@ -58,7 +47,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/new_city"
+            android:id="@+id/new_city_et"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Wprowadź nazwę miasta"

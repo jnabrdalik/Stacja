@@ -8,4 +8,6 @@
     <string name="update_weather">Aktualizuj</string>
     <string name="refresh">Odśwież</string>
     <string name="add_city">Dodaj miasto</string>
+    <string name="weather_app">Stacja pogodowa</string>
+    <string name="tap_anywhere">Dotknij gdziekolwiek, by przejść dalej</string>
 </resources>
